@@ -1,0 +1,15 @@
+{
+  "name": "react-webpack-ts-app",
+  "version": "1.0.0",
+  "description": "react와 webpack, express, typescript를 사용한 boilerplate",
+  "scripts": {
+    "backend": "cd backend && npm run dev",
+    "frontend": "cd frontend && npm start",
+    "start": "concurrently \"npm run frontend\" \"npm run backend\""
+  },
+  "author": "ktmihs",
+  "license": "ISC",
+  "dependencies": {
+    "concurrently": "^7.6.0"
+  }
+}
