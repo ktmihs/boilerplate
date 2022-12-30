@@ -1,14 +1,17 @@
 import express from 'express';
 import path from 'path';
 import dotenv from 'dotenv';
-import * as api from './router/index';
+import * as api from './router';
 
 const app = express();
 const __dirname = path.resolve();
-const PORT = process.env.PORT;
+const env = dotenv.config().parsed;
 
-app.use(express.static('public'));
+const PORT = env?.PORT;
+
+// app.use(express.static('public'));
 app.use(express.json());
+
 app.use('/api', api.router);
 
 app.listen(PORT, () => {
