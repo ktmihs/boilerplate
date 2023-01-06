@@ -1,0 +1,28 @@
+{
+  "name": "ktmihs-bp",
+  "version": "1.0.0",
+  "description": "ktmihs's boilerplate",
+  "type": "module",
+  "bin": {
+    "ktmihs-bp": "./bin/generate.js"
+  },
+  "keywords": [
+    "react",
+    "node",
+    "boilerplate",
+    "typescript",
+    "vite",
+    "webpack"
+  ],
+  "author": "ktmihs <yellowgreen423@gmail.com> (https://github.com/ktmihs)",
+  "license": "ISC",
+  "homepage": "https://github.com/ktmihs/boilerplate",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/ktmihs/boilerplate.git"
+  },
+  "bugs": {
+    "url": "https://github.com/ktmihs/boilerplate/issues",
+    "email": "yellowgreen423@gmail.com"
+  }
+}
