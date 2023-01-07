@@ -48,7 +48,6 @@ if (!MY_PACKAGE_LIST.includes(PACKAGE_NAME)) {
 (async () => {
   try {
     const isExistProject = existsSync(PROJECT_NAME);
-    const isExistModules = existsSync('./node_modules');
 
     if (isExistProject) {
       console.log(
@@ -59,21 +58,11 @@ if (!MY_PACKAGE_LIST.includes(PACKAGE_NAME)) {
     }
 
     console.log("Downloading files...");
-    execSync(`npm i degit`);
-    execSync(`degit ${GIT_REPO}/${PACKAGE_NAME}#${PACKAGE_NAME} ${PROJECT_NAME}`);
-    execSync("npm uninstall degit");
-
-    if (!isExistModules) {
-      execSync("npx rimraf node_modules");
-      execSync("npx rimraf package-lock.json");
-    }
+    execSync(`npx degit ${GIT_REPO}/${PACKAGE_NAME}#${PACKAGE_NAME} ${PROJECT_NAME}`);
 
     console.log("\nInstalling dependencies...");
     process.chdir(PROJECT_NAME);
     execSync("npm install");
-
-    console.log("\nRemoving useless files ✂");
-    execSync("npx rimraf ../.git");
 
     console.log("\n\n🐰 The installation is done! 🐰\n");
   } catch (error) {
