@@ -3,7 +3,7 @@
 import { execSync } from "child_process";
 import { existsSync } from "fs";
 
-const MY_PACKAGE_LIST = ["react-webpack-ts", "react-vite-ts"];
+const MY_PACKAGE_LIST = ["react-webpack-ts", "react-vite-ts", "react-webpack-sass"];
 const EXIT = () => process.exit(1);
 
 const printPackage = () => {
