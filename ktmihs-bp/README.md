@@ -15,7 +15,7 @@ npx ktmihs-bp [PACKAGE_NAME] [PROJECT_NAME]
 npx ktmihs-bp react-webpack-ts new-react-app
 ```
 
-# package list (23.01.06 기준)
+# package list (23.01.22 기준)
 
 ## 1. react-webpack-ts
 
