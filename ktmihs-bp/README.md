@@ -29,3 +29,11 @@ npx ktmihs-bp react-webpack-ts new-react-app
 - Vite (내장 esbuild 사용)
 - React
 - TypeScript
+
+## 3. react-webpack-sass
+
+- React
+- Webpack
+- TypeScript
+- Node.js (Express)
+- sass (scss)

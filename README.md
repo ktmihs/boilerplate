@@ -6,7 +6,7 @@
 - 기술 학습을 위해 주기적으로 다양한 조합의 boilerplate를 생성할 예정입니다.
 - 사용 방법은 [npm](https://www.npmjs.com/package/ktmihs-bp)을 참고해주세요.
 
-## 📚 package list (23.01.06 기준)
+## 📚 package list (23.01.22 기준)
 
 ### 📕 1. react-webpack-ts
 
@@ -20,3 +20,11 @@
 - Vite (내장 esbuild 사용)
 - React
 - TypeScript
+
+### 📒 3. react-webpack-sass
+
+- React
+- Webpack
+- TypeScript
+- Node.js (Express)
+- sass (scss)
