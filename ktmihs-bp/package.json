@@ -1,6 +1,6 @@
 {
   "name": "ktmihs-bp",
-  "version": "1.1.0",
+  "version": "1.2.0",
   "description": "ktmihs's boilerplate",
   "type": "module",
   "bin": {
@@ -12,7 +12,8 @@
     "boilerplate",
     "typescript",
     "vite",
-    "webpack"
+    "webpack",
+    "sass"
   ],
   "author": "ktmihs <yellowgreen423@gmail.com> (https://github.com/ktmihs)",
   "license": "ISC",
