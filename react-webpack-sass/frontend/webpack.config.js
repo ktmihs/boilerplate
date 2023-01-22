@@ -5,7 +5,7 @@ const dotenv = require("dotenv").config().parsed;
 
 module.exports = (env, argv) => {
   const isProduction = argv.mode === "production";
-  const PORT = dotenv.PORT || 4000;
+  const PORT = dotenv.PORT || 5500;
 
   return {
     mode: isProduction ? "production" : "development",
@@ -48,7 +48,7 @@ module.exports = (env, argv) => {
     ],
     devServer: {
       proxy: {
-        '/api': 'http://localhost:5500',
+        '/api': 'http://localhost:4000',
       },
       port: PORT,
       open: true,
