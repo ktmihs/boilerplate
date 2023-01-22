@@ -7,11 +7,10 @@ module.exports = (env, argv) => {
   const isProduction = argv.mode === "production";
   const PORT = dotenv.PORT || 4000;
 
-  console.log('===========================', env, argv, dotenv)
   return {
     mode: isProduction ? "production" : "development",
     devtool: isProduction ? "hidden-source-map" : "source-map",
-    entry: "./src/index.tsx",
+    entry: ['./src/index.tsx', './src/style/index.scss'],
     output: {
       filename: "[name].js",
       path: path.join(__dirname, '/dist'),
@@ -19,7 +18,7 @@ module.exports = (env, argv) => {
     },
     resolve: {
       modules: ["node_modules"],
-      extensions: [".js", ".jsx", ".ts", ".tsx"],
+      extensions: [".js", ".jsx", ".ts", ".tsx", ".scss"],
     },
     module: {
       rules: [
@@ -29,8 +28,8 @@ module.exports = (env, argv) => {
           use: ["babel-loader", "ts-loader"]
         },
         {
-          test: /\.(c|sc)ss?$/,
-          use: ["sass-loader", "style-loader", "css-loader"],
+          test: /\.scss$/i,
+          use: [MiniCssExtractPlugin.loader, "css-loader", "sass-loader"],
         },
         {
           test: /\.(webp|jpg|png|jpeg|gif|svg)$/,
@@ -45,7 +44,7 @@ module.exports = (env, argv) => {
       new HtmlWebpackPlugin({
         template: "./public/index.html",
       }),
-      new MiniCssExtractPlugin({ filename: 'css/index.css' })
+      new MiniCssExtractPlugin({ filename: 'index.css' })
     ],
     devServer: {
       proxy: {

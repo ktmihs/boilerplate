@@ -1,7 +1,7 @@
 {
-  "name": "react-webpack-ts-app",
+  "name": "react-webpack-sass-app",
   "version": "1.0.0",
-  "description": "react와 webpack, express, typescript를 사용한 boilerplate",
+  "description": "react와 webpack, express, typescript, sass를 사용한 boilerplate",
   "scripts": {
     "backend": "cd backend && npm run dev",
     "frontend": "cd frontend && npm start",
