@@ -64,6 +64,14 @@ if (!MY_PACKAGE_LIST.includes(PACKAGE_NAME)) {
     process.chdir(PROJECT_NAME);
     execSync("npm install");
 
+    console.log(`
+    🎇 GUIDELINE 🎇
+      1. '.env' file is not included.
+        Please add it.
+      2. The default ports for the FE and BE are '5500' and '4000' respectively.
+      3. Please 'npm install' it before you start.
+    `);
+
     console.log("\n\n🐰 The installation is done! 🐰\n");
   } catch (error) {
     console.log(error);

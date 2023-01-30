@@ -1,6 +1,6 @@
 {
   "name": "ktmihs-bp",
-  "version": "1.2.1",
+  "version": "1.2.2",
   "description": "ktmihs's boilerplate",
   "type": "module",
   "bin": {
